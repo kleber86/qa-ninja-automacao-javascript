@@ -40,3 +40,39 @@ console.log(2 > 1)
 // Comparação - Falsos
 console.log(2 >= 3)
 console.log(2 == 3)
+
+/**
+ * Aula 04: Controles de Fluxo
+ */
+if(true){
+    console.log('Condição verdadeira.')
+}
+if (false) {
+    console.log('Condição falsa. Não aparece.')
+}
+
+var idade = prompt('Qual é a sua idade?')
+if(idade >= 18){
+    console.log('Posso ir no show do Iron Maiden')
+}else if(idade>= 12){
+    console.log('Vou ao show acompanhado.')
+}else{
+    console.log('Não foi ao show')
+}
+
+var ingresso = prompt('Qual seu ingresso')
+
+switch(ingresso){
+    case 'vip':
+        console.log('Irei ficar no camarote')
+        break;
+    case 'premium':
+        console.log('Irei ficar na pista premium')
+        break;
+    case 'comum':
+        console.log('Irei ficar na arquibancada')
+        break;
+    default:
+        console.log('Ingresso invalido')
+        break;
+}
