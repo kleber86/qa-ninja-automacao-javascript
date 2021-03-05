@@ -76,3 +76,26 @@ switch(ingresso){
         console.log('Ingresso invalido')
         break;
 }
+
+/**
+ * Aula 05: Loops
+ */
+
+ for(var a = 0; a <= 10; a++){
+     console.log(`a = ${a}`)
+ }
+
+ for (var b = 10; b >= 0; b--){
+     console.log(`b = ${b}`)
+ }
+
+ var valor = 0
+ while (valor < 10) {
+     console.log(`valor = ${valor}`)
+     valor++
+ }
+
+ var avengers = ['spiderman', 'Black Window']
+ avengers.forEach(function(value, key) {
+     console.log(`${value} na posição: ${key}`)
+ })
