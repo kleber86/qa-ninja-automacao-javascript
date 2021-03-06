@@ -153,3 +153,27 @@ var album = {
 album.showInfo()
 console.log(typeof album)
 console.log(album.title)
+
+/**
+  * Aula 09: DOM
+*/
+
+/**
+ *  h1-h6: Cabeçalhos e Titulos
+ *  p: Paragrafos
+ *  ul: Agrupadores de listas
+ *  li: Itens de uma lista
+ *  a: Link
+ *  form: Formularios
+ *  input: Campos dos formularios do tipo: text, checked, radio
+ *  textarea: Campos de formularios para paragrafos
+ * 
+ */
+
+ function somarValores(){
+     var n1 = document.getElementById('number1').value
+     var n2 = document.getElementById('number2').value
+     var result = parseInt(n1) + parseInt(n2)
+     var divResultado = document.getElementById('resultado')
+     divResultado.append('O resultado da soma é ' + result)
+ }
