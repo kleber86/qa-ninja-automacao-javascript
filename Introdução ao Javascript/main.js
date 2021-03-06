@@ -139,3 +139,17 @@ function imprimirTexto(texto) {
     console.log(texto)
 }
 imprimirTexto('Kleber')
+
+/**
+  * Aula 08: Objeto
+*/
+var album = {
+    title: 'Black',
+    released: 1991,
+    showInfo: function(){
+        console.log(`Titulo do Album: ${this.title}, lançado em ${this.released}`)
+    }
+}
+album.showInfo()
+console.log(typeof album)
+console.log(album.title)
