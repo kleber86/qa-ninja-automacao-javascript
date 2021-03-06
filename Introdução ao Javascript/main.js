@@ -125,3 +125,17 @@ console.table(avengers2)
 var indice = avengers2.indexOf('Feiticeira')
 avengers2.splice(indice)
 console.table(avengers2)
+
+/**
+  * Aula 07: Funções
+*/
+
+function somar(n1, n2){
+    console.log(n1 + n2)
+}
+somar(10,10)
+
+function imprimirTexto(texto) {
+    console.log(texto)
+}
+imprimirTexto('Kleber')
