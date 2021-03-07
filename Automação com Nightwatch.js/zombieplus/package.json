@@ -1,0 +1,16 @@
+{
+  "name": "zombieplus",
+  "version": "1.0.0",
+  "description": "Estudos sobre testes automatizados com nightwatch",
+  "main": "index.js",
+  "scripts": {
+    "test": ".\\node_modules\\.bin\\nightwatch.cmd"
+  },
+  "keywords": [],
+  "author": "Kleber Nascimento",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^89.0.0",
+    "nightwatch": "^1.5.1"
+  }
+}
