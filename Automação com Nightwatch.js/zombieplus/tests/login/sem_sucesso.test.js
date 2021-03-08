@@ -1,8 +1,16 @@
 module.exports = {
+
+    before: (browser) => {
+        browser.resizeWindow(1600, 900)
+    },
+
+    after: (browser) => {
+        browser.end();
+    },
+
     'email não informado': (browser) => {
         let alertInfo = '.alert-info'
         browser
-            .resizeWindow(1600, 900)
             .url('http://zombie-web:5000/login')
             .waitForElementVisible('.card-login')
             .setValue('#emailId', '')
@@ -13,7 +21,6 @@ module.exports = {
     'senha não informada': (browser) => {
         let alertInfo = '.alert-info'
         browser
-            .resizeWindow(1600, 900)
             .url('http://zombie-web:5000/login')
             .waitForElementVisible('.card-login')
             .setValue('#emailId', 'zumbi@dospalmares.com.br')
@@ -24,7 +31,6 @@ module.exports = {
     'email invalido': (browser) => {
         let alertDanger = '.alert-danger'
         browser
-            .resizeWindow(1600, 900)
             .url('http://zombie-web:5000/login')
             .waitForElementVisible('.card-login')
             .setValue('#emailId', '404@hotmail.com')
@@ -35,13 +41,11 @@ module.exports = {
     'senha invalida': (browser) => {
         let alertDanger = '.alert-danger'
         browser
-            .resizeWindow(1600, 900)
             .url('http://localhost:5000/login')
             .waitForElementVisible('.card-login')
             .setValue('#emailId', 'zumbi@dospalmares.com.br')
             .setValue('#passId', '123')
             .click('.login-button')
             .assert.containsText(alertDanger, 'Usuário e/ou senha inválidos')
-            .end();
     }
 }

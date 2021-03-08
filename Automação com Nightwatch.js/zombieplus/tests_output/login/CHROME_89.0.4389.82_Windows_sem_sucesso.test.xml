@@ -5,30 +5,30 @@
 
   <testsuite name="login.sem_sucesso.test"
     errors="0" failures="0" hostname="" id="" package="login" skipped="0"
-    tests="4" time="8.864" timestamp="">
+    tests="4" time="7.454" timestamp="">
   
-    <testcase name="email não informado" classname="login.sem_sucesso.test" time="3.222" assertions="2">
+    <testcase name="email não informado" classname="login.sem_sucesso.test" time="2.926" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="senha não informada" classname="login.sem_sucesso.test" time="1.233" assertions="2">
+    <testcase name="senha não informada" classname="login.sem_sucesso.test" time="0.8840" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="email invalido" classname="login.sem_sucesso.test" time="1.484" assertions="2">
+    <testcase name="email invalido" classname="login.sem_sucesso.test" time="1.176" assertions="2">
 
     
 
     
     </testcase>
   
-    <testcase name="senha invalida" classname="login.sem_sucesso.test" time="2.925" assertions="2">
+    <testcase name="senha invalida" classname="login.sem_sucesso.test" time="2.468" assertions="2">
 
     
 
