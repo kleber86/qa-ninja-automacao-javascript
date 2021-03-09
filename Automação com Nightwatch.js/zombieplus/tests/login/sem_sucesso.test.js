@@ -1,12 +1,4 @@
 module.exports = {
-
-    before: (browser) => {
-        browser.resizeWindow(1600, 900)
-    },
-
-    after: (browser) => {
-        browser.end();
-    },
     //'@disabled': true,
     'email não informado': (browser) => {
         let login = browser.page.login()
