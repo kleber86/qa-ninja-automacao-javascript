@@ -6,6 +6,16 @@ let loginActions = {
             .setValue('@emailInput', email)
             .setValue('@passInput', senha)
             .click('@loginButton')
+    },
+    mensagemInfo: function(texto){
+        return this
+            .waitForElementVisible('@form', 3000)
+            .assert.containsText('@alertInfo', texto)
+    },
+    mensagemErro: function(texto){
+        return this
+            .waitForElementVisible('@form', 3000)
+            .assert.containsText('@alertDanger', texto)
     }
 }
 
