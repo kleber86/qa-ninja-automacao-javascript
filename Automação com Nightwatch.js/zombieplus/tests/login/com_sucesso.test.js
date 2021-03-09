@@ -5,13 +5,9 @@ module.exports = {
         let login = browser.page.login()
         let sidebar = browser.page.sidebar()
 
-        login
-            .navigate()
-            .resizeWindow('1300', '700')
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
-            .setValue('@passInput', 'pwd123')
-            .click('@loginButton')
+        browser.resizeWindow(1700, 800)
+        
+        login.com('zumbi@dospalmares.com.br', 'pwd123')
 
         sidebar
             .waitForElementVisible('@userInfo', 3000)

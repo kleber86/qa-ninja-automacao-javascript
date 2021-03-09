@@ -12,42 +12,26 @@ module.exports = {
         let login = browser.page.login()
 
         login
-            .navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', '')
-            .setValue('@passInput', 'pwd123')
-            .click('@loginButton')
+            .com('', '123456')
             .assert.containsText('@alertInfo', 'Opps. Cadê o email?')
     },
     'senha não informada': (browser) => {
         let login = browser.page.login()
 
         login
-            .navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
-            .setValue('@passInput', '')
-            .click('@loginButton')
+            .com('zumbi@dospalmares.com.br', '')
             .assert.containsText('@alertInfo', 'Opps. Cadê a senha?')
     },
     'email invalido': (browser) => {
         let login = browser.page.login()
         login
-            .navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', '404@hotmail.com')
-            .setValue('@passInput', 'pwd123')
-            .click('@loginButton')
+            .com('404@hotmail.com', 'pwd123')
             .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
     },
     'senha invalida': (browser) => {
         let login = browser.page.login()
         login
-            .navigate()
-            .waitForElementVisible('@form', 3000)
-            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
-            .setValue('@passInput', '123')
-            .click('@loginButton')
+            .com('zumbi@dospalmares@com.br', '123456')
             .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
     }
 }
