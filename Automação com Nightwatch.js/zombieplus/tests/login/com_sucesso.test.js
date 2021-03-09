@@ -1,17 +1,21 @@
 module.exports = {
-    '@disabled': true,
+    //'@disabled': true,
     'login com sucesso refatorado': (browser) => {
-        let userInfo = '.user .info span'
-        browser
-        .resizeWindow('1300', '700')
-        .url('http://zombie-web:5000/login')
-        .waitForElementVisible('.card-login', 3000)
-        .setValue('input[name=email]', 'zumbi@dospalmares.com.br')
-        .setValue('#passId', 'pwd123')
-        .click('.login-button')
+        
+        let login = browser.page.login()
+        let sidebar = browser.page.sidebar()
 
-        .waitForElementVisible(userInfo, 3000)
-        .assert.containsText(userInfo, 'Quilombo')
-        .end();
+        login
+            .navigate()
+            .resizeWindow('1300', '700')
+            .waitForElementVisible('@form', 3000)
+            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
+            .setValue('@passInput', 'pwd123')
+            .click('@loginButton')
+
+        sidebar
+            .waitForElementVisible('@userInfo', 3000)
+            .assert.containsText('@userInfo', 'Quilombo')
+            .end();
     }
 }

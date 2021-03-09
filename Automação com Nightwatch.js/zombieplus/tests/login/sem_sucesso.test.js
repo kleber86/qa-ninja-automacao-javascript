@@ -7,45 +7,47 @@ module.exports = {
     after: (browser) => {
         browser.end();
     },
-
+    //'@disabled': true,
     'email não informado': (browser) => {
-        let alertInfo = '.alert-info'
-        browser
-            .url('http://zombie-web:5000/login')
-            .waitForElementVisible('.card-login')
-            .setValue('#emailId', '')
-            .setValue('#passId', 'pwd123')
-            .click('.login-button')
-            .assert.containsText(alertInfo, 'Opps. Cadê o email?')
+        let login = browser.page.login()
+
+        login
+            .navigate()
+            .waitForElementVisible('@form', 3000)
+            .setValue('@emailInput', '')
+            .setValue('@passInput', 'pwd123')
+            .click('@loginButton')
+            .assert.containsText('@alertInfo', 'Opps. Cadê o email?')
     },
     'senha não informada': (browser) => {
-        let alertInfo = '.alert-info'
-        browser
-            .url('http://zombie-web:5000/login')
-            .waitForElementVisible('.card-login')
-            .setValue('#emailId', 'zumbi@dospalmares.com.br')
-            .setValue('#passId', '')
-            .click('.login-button')
-            .assert.containsText(alertInfo, 'Opps. Cadê a senha?')
+        let login = browser.page.login()
+
+        login
+            .navigate()
+            .waitForElementVisible('@form', 3000)
+            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
+            .setValue('@passInput', '')
+            .click('@loginButton')
+            .assert.containsText('@alertInfo', 'Opps. Cadê a senha?')
     },
     'email invalido': (browser) => {
-        let alertDanger = '.alert-danger'
-        browser
-            .url('http://zombie-web:5000/login')
-            .waitForElementVisible('.card-login')
-            .setValue('#emailId', '404@hotmail.com')
-            .setValue('#passId', 'pwd123')
-            .click('.login-button')
-            .assert.containsText(alertDanger, 'Usuário e/ou senha inválidos')
+        let login = browser.page.login()
+        login
+            .navigate()
+            .waitForElementVisible('@form', 3000)
+            .setValue('@emailInput', '404@hotmail.com')
+            .setValue('@passInput', 'pwd123')
+            .click('@loginButton')
+            .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
     },
     'senha invalida': (browser) => {
-        let alertDanger = '.alert-danger'
-        browser
-            .url('http://localhost:5000/login')
-            .waitForElementVisible('.card-login')
-            .setValue('#emailId', 'zumbi@dospalmares.com.br')
-            .setValue('#passId', '123')
-            .click('.login-button')
-            .assert.containsText(alertDanger, 'Usuário e/ou senha inválidos')
+        let login = browser.page.login()
+        login
+            .navigate()
+            .waitForElementVisible('@form', 3000)
+            .setValue('@emailInput', 'zumbi@dospalmares.com.br')
+            .setValue('@passInput', '123')
+            .click('@loginButton')
+            .assert.containsText('@alertDanger', 'Usuário e/ou senha inválidos')
     }
 }
