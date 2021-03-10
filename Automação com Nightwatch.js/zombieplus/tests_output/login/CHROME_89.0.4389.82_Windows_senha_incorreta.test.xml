@@ -3,11 +3,11 @@
             failures="0"
             tests="1">
 
-  <testsuite name="login.com_sucesso.test"
+  <testsuite name="login.senha_incorreta.test"
     errors="0" failures="0" hostname="" id="" package="login" skipped="0"
-    tests="1" time="30.29" timestamp="">
+    tests="1" time="5.491" timestamp="">
   
-    <testcase name="login com sucesso refatorado" classname="login.com_sucesso.test" time="30.29" assertions="3">
+    <testcase name="senha invalida" classname="login.senha_incorreta.test" time="5.491" assertions="3">
 
     
 
