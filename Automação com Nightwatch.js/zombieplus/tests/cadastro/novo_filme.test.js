@@ -1,3 +1,4 @@
+import pg from '../../lib/db'
 
 let movieData = {}
 
@@ -16,6 +17,9 @@ module.exports = {
             cover: 'resident-evil-2001.jpg',
             plot: 'Um terrível vírus é criminosamente solto nas dependências da Umbrella Corporation, a mais poderosa empresa do mundo.'
         }
+        
+        pg.removeByTitle(movieData.title)
+
         let login = browser.page.login()
         let sidebar = browser.page.sidebar()
 
