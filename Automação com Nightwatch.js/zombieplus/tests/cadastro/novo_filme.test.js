@@ -14,7 +14,7 @@ module.exports = {
             releaseDate: '01/02/2002',
             cast: ['Milla Jovovick', 'Ali Larter', 'Iam Glen', 'Shawn Roberts'],
             cover: 'resident-evil-2001.jpg',
-            plot: 'Um terrível vírus é criminosamente solto nas dependências da Umbrella Corporation, a mais poderosa empresa do mundo, que secretamente desenvolve pesquisas biológicas. Infectados, seus funcionários são transformados em zumbis, e Alice é chamada para averiguar os acontecimentos.'
+            plot: 'Um terrível vírus é criminosamente solto nas dependências da Umbrella Corporation, a mais poderosa empresa do mundo.'
         }
         let login = browser.page.login()
         let sidebar = browser.page.sidebar()
@@ -30,6 +30,11 @@ module.exports = {
             .createForm()
             .setValue('@titleInput', movieData.title)
             .selectStatus(movieData.status)
-            .pause(5000)
+            .setValue('@dateInput', movieData.releaseDate)
+            .setValue('@yearInput', movieData.year)
+            .insertCast(movieData.cast)
+            .setValue('@plotInput', movieData.plot)
+            .click('@createButton')
+            .pause(10000)
     }
 }

@@ -11,6 +11,16 @@ let createActions = {
             .waitForElementVisible(`//li//span[contains(text(),"${status}")]`, 2000)
             .click(`//li//span[contains(text(),"${status}")]`)
             .useCss() // Habilita a utilização do CSS Selector
+    },
+    insertCast: function (cast) {
+        const browser = this
+
+        cast.forEach(function (actor) {
+            browser
+                .setValue('@castInput', actor)
+                .api.keys(browser.api.Keys.TAB)
+        })
+        return this.pause(1000)
     }
 }
 
@@ -22,7 +32,7 @@ module.exports = {
         titleInput: 'input[name=title]',
         statusSelect: 'input[placeholder=Status]',
         yearInput: 'input[name=year]',
-        dateInput: 'input[name=releaseDate]',
+        dateInput: 'input[name=release_date]',
         castInput: '.cast',
         plotInput: 'textarea[name=overview]',
         createButton: '#create-movie'
