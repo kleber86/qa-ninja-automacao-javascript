@@ -39,6 +39,8 @@ module.exports = {
             .insertCast(movieData.cast)
             .setValue('@plotInput', movieData.plot)
             .click('@createButton')
-            .pause(10000)
+            //.pause(2000)
+            .waitForElementVisible('@list', 3000)
+            .assert.containsText('@list', movieData.title)
     }
 }

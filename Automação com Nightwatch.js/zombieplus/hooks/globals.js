@@ -1,10 +1,10 @@
 module.exports = {
     beforeEach: (browser, done) => {
-        browser.resizeWindow(1300, 800)
+        browser.resizeWindow(1400, 900)
         done()
     },
 
-    beforeEach: (browser, done) => {
+    afterEach: (browser, done) => {
         browser.end()
         done()
     }
