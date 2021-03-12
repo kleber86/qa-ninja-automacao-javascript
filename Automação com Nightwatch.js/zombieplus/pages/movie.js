@@ -21,6 +21,12 @@ let createActions = {
                 .api.keys(browser.api.Keys.TAB)
         })
         return this.pause(1000)
+    },
+    uploadCover: function(fileName){
+        let fullPath = require('path').resolve(__dirname, '../images/' + fileName)
+        console.log('BUGGGG: ' + fullPath)
+
+        return this.setValue('@uploadInput', fullPath)
     }
 }
 
@@ -35,6 +41,7 @@ module.exports = {
         dateInput: 'input[name=release_date]',
         castInput: '.cast',
         plotInput: 'textarea[name=overview]',
+        uploadInput: '#upcover',
         createButton: '#create-movie',
         list: 'table tbody'
     }

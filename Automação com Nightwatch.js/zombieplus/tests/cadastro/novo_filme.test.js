@@ -14,7 +14,7 @@ module.exports = {
             year: 2002,
             releaseDate: '01/02/2002',
             cast: ['Milla Jovovick', 'Ali Larter', 'Iam Glen', 'Shawn Roberts'],
-            cover: 'resident-evil-2001.jpg',
+            cover: 'resident-evil-2002.jpg',
             plot: 'Um terrível vírus é criminosamente solto nas dependências da Umbrella Corporation, a mais poderosa empresa do mundo.'
         }
         
@@ -38,8 +38,9 @@ module.exports = {
             .setValue('@yearInput', movieData.year)
             .insertCast(movieData.cast)
             .setValue('@plotInput', movieData.plot)
+            .uploadCover(movieData.cover)
+            .pause(2000)
             .click('@createButton')
-            //.pause(2000)
             .waitForElementVisible('@list', 3000)
             .assert.containsText('@list', movieData.title)
     }
