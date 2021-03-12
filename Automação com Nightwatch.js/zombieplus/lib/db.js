@@ -14,5 +14,35 @@ export default {
                 })
                 .catch(e => reject(e.stack))
         })
+    },
+    insertMovie: (movie) => {
+        let query = `INSERT INTO public.movies(
+            title,
+            status,
+            year,
+            release_date,
+            "cast",
+            overview,
+            cover,
+            created_at,
+            updated_at) VALUES(
+                '${movie.title}',
+                '${movie.status}',
+                '${movie.year}',
+                '${movie.releaseDate}',
+                '{${movie.cast}}',
+                '{${movie.overview}}',
+                '${movie.cover}',
+                current_timestamp,
+                current_timestamp);`
+
+        return new Promise((resolve, reject) => {
+            pool
+                .query(query)
+                .then(res => {
+                    resolve(res)
+                })
+                .catch(e => reject(e.stack))
+        })
     }
 }
