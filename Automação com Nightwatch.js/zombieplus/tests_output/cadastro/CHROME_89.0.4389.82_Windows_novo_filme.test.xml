@@ -5,9 +5,9 @@
 
   <testsuite name="cadastro.novo_filme.test"
     errors="0" failures="0" hostname="" id="" package="cadastro" skipped="0"
-    tests="1" time="11.76" timestamp="">
+    tests="1" time="27.11" timestamp="">
   
-    <testcase name="quando eu faço o cadastro do filme" classname="cadastro.novo_filme.test" time="11.76" assertions="8">
+    <testcase name="quando eu faço o cadastro do filme" classname="cadastro.novo_filme.test" time="27.11" assertions="8">
 
     
 
