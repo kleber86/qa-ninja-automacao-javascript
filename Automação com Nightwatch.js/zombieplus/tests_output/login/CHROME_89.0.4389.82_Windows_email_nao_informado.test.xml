@@ -5,9 +5,9 @@
 
   <testsuite name="login.email_nao_informado.test"
     errors="0" failures="0" hostname="" id="" package="login" skipped="0"
-    tests="1" time="7.559" timestamp="">
+    tests="1" time="2.978" timestamp="">
   
-    <testcase name="email não informado" classname="login.email_nao_informado.test" time="7.559" assertions="3">
+    <testcase name="email não informado" classname="login.email_nao_informado.test" time="2.978" assertions="3">
 
     
 

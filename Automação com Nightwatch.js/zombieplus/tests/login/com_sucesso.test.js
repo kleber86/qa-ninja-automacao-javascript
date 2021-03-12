@@ -1,5 +1,5 @@
 module.exports = {
-    //'@disabled': true,
+    '@tags': ['smoke'],
     'login com sucesso refatorado': (browser) => {
         
         let login = browser.page.login()

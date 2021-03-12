@@ -5,9 +5,9 @@
 
   <testsuite name="login.senha_incorreta.test"
     errors="0" failures="0" hostname="" id="" package="login" skipped="0"
-    tests="1" time="5.491" timestamp="">
+    tests="1" time="3.185" timestamp="">
   
-    <testcase name="senha invalida" classname="login.senha_incorreta.test" time="5.491" assertions="3">
+    <testcase name="senha invalida" classname="login.senha_incorreta.test" time="3.185" assertions="3">
 
     
 
