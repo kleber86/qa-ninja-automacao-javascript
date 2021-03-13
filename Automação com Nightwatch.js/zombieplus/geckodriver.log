@@ -1,0 +1,15 @@
+1615595075331	geckodriver	INFO	Listening on 127.0.0.1:4444
+1615595076372	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Kleber\\AppData\\Local\\Temp\\rust_mozprofileVMUng7"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615595080985	Marionette	INFO	Listening on port 61778
+1615595085492	Marionette	INFO	Stopped listening on port 61778
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1615595086319	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Kleber\\AppData\\Local\\Temp\\rust_mozprofileadPVB3"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1615595090722	Marionette	INFO	Listening on port 61867
+1615595094210	Marionette	INFO	Stopped listening on port 61867
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

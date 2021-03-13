@@ -5,12 +5,12 @@
 
   <testsuite name="busca.404.test"
     errors="0" failures="0" hostname="" id="" package="busca" skipped="0"
-    tests="2" time="1.402" timestamp="">
+    tests="2" time="1.397" timestamp="">
   
-    <testcase name="quando eu busco um titulo não cadastrado" classname="busca.404.test" time="0.1820" assertions="0">
+    <testcase name="quando eu busco um titulo não cadastrado" classname="busca.404.test" time="0.2770" assertions="0">
     </testcase>
   
-    <testcase name="então devo ver uma mensagem de alerta" classname="busca.404.test" time="1.220" assertions="2">
+    <testcase name="então devo ver uma mensagem de alerta" classname="busca.404.test" time="1.120" assertions="2">
 
     
 
