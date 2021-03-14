@@ -1,0 +1,11 @@
+pipelline{
+    agent any
+    stage{
+        stage('build'){
+            sh "npm install"
+        }
+        stage('Tests'){
+            sh "npm test"
+        }
+    }
+}
