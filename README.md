@@ -3,6 +3,10 @@
     <h1>Automação Node.js e Javascript</h1>
 </div>
 
+<div align="center">
+    <img src="zombie.gif">
+</div>
+
 ### :memo: Modulos
 
 #### Introdução ao Javascript 
